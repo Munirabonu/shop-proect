@@ -1,0 +1,71 @@
+.nav {
+  padding: 0 1rem;
+  background-color: rgb(129, 19, 231);
+}
+.content {
+  min-height: calc(100vh - 70px - 64px);
+  padding: 1.5rem 0;
+}
+.goods {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(250px, 1rem));
+  gap: 1.5rem;
+}
+.card {
+  display: flex;
+  flex-direction: column;
+}
+.card-content{
+  flex: 1;
+}
+.cart {
+  position: fixed;
+  bottom: 2rem;
+  right: 3rem;
+  cursor: pointer;
+  padding: 1rem;
+  transition: 1s;
+  border-radius: 22px;
+  transition: 1.5s;
+
+}
+
+@media (min-width:767) {
+  .cart {
+    top: 5rem;
+    bottom: unset;
+  }
+}
+.bsk{
+  position: fixed;
+  top: 0;
+  bottom: 0;
+  right: 0;
+  left: 0;
+  background-color: rgba(0,0,0,.5);
+}
+.basket-list {
+  position: fixed;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  background-color: rgb(248, 246, 244);
+  width: 50rem;
+  max-width: 95%;
+  transition: 1.5s;
+  animation: show .5s ease-in-out;
+}
+@keyframes show {
+  from { top:70%; opacity: 0;}
+  to { top: 50%; opacity: 1;}
+}
+.basketInDc {
+  margin-left: 10px;
+  border: solid rgb(248, 246, 244);
+  background: rgb(2, 150, 150);
+  color: aliceblue;
+  font-size: 18px;
+  font-weight: bolder;
+  width: 30px;
+  border-radius: 5px;
+}
