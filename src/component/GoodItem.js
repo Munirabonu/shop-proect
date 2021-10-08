@@ -1,6 +1,11 @@
+import { useContext } from "react";
+import { ShopContext } from "../context";
+
 export default function GoodItem(props) {
 
-    const { id, name, description, full_background, price, onToggleBuy } = props;
+    const { id, name, description, full_background, price } = props;
+
+    const {onToggleBuy} = useContext(ShopContext)
 
     return (
         <div className="card" id={id}>

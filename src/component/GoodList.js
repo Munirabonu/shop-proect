@@ -1,9 +1,10 @@
 import GoodItem from "./GoodItem";
+import { useContext } from "react";
+import { ShopContext } from "../context";
+export default function GoodList() {
+    const {goods =[]}= useContext(ShopContext);
 
-export default function GoodList(props) {
-    const {goods =[], onToggleBuy}= props;
-
-    if(!goods.langht){
+    if(!goods.lenght){
         <h3>Noting here</h3>
     }
     return (
@@ -11,8 +12,7 @@ export default function GoodList(props) {
             {goods.map((item) => (
                 <GoodItem 
                 key={item.id} 
-                {...item} 
-                onToggleBuy={onToggleBuy}
+                {...item}
                 />
             ))}
         </div>
